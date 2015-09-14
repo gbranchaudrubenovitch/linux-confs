@@ -10,7 +10,7 @@ add-apt-repository --yes ppa:webupd8team/java
 curl -sL https://deb.nodesource.com/setup_iojs_3.x | bash - # does apt-get update for us
 
 # auto accept oracle's license
-echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
 
 apt-get --yes install git iojs oracle-java8-installer
