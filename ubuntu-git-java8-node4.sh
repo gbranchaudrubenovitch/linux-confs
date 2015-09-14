@@ -3,17 +3,17 @@
 
 apt-get update
 apt-get --yes upgrade
-apt-get --yes install dialog software-properties-common curl
+apt-get --yes install dialog software-properties-common curl sudo
 
 add-apt-repository --yes ppa:git-core/ppa
 add-apt-repository --yes ppa:webupd8team/java
-curl -sL https://deb.nodesource.com/setup_iojs_3.x | bash - # does apt-get update for us
+curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash - # does apt-get update for us
 
 # auto accept oracle's license
 echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
 echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
 
-apt-get --yes install git iojs oracle-java8-installer nano
+apt-get --yes install git nodejs oracle-java8-installer nano
 
 # add a new gbrdev user (with sudo)
 adduser gbrdev
