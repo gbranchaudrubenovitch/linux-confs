@@ -14,3 +14,7 @@ echo debconf shared/accepted-oracle-license-v1-1 select true | debconf-set-selec
 echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selections
 
 apt-get --yes install git iojs oracle-java8-installer nano
+
+# add a new gbrdev user (with sudo)
+adduser gbrdev
+adduser gbrdev sudo
