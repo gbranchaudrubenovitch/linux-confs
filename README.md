@@ -7,3 +7,15 @@ scripts and confs that I use in linux/mac environments
 ## Adding your public key to a new ssh host
 *  `ssh-copy-id user@host`
 *  `cat <public-key-file> | ssh user@host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys`
+
+## Bash scripts
+* start them with:
+
+    ```
+    #!/bin/bash
+    set -euo pipefail
+    trap "echo 'error: Script failed: see failed command above'" ERR
+    ```
+
+## Bash mastery tips
+* https://github.com/jlevy/the-art-of-command-line
