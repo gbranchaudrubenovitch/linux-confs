@@ -16,6 +16,7 @@ scripts and confs that I use in linux/mac environments
     set -euo pipefail
     trap "echo 'error: Script failed: see failed command above'" ERR
     ```
+* fallback-to-default-if-unset with: `myVar=${1:-defaultValue}` 
 
 ## Bash mastery tips
 * https://github.com/jlevy/the-art-of-command-line
