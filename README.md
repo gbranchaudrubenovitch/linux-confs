@@ -3,6 +3,7 @@ scripts and confs that I use in linux/mac environments
 
 ## For nice colors in bash
 * LS_COLORS: `wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircolors && echo 'eval $(dircolors -b $HOME/.dircolors)' >> $HOME/.bashrc && . $HOME/.bashrc`
+    * Mac OS X: need to install `gnu coreutils` before: `brew install coreutils` + modify `.bash_profile` as recommended.
 
 ## Adding your public key to a new ssh host
 *  `ssh-copy-id user@host`
