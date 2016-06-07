@@ -3,7 +3,21 @@ scripts and confs that I use in linux/mac environments
 
 ## For nice colors in bash
 * LS_COLORS: `wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircolors && echo 'eval $(dircolors -b $HOME/.dircolors)' >> $HOME/.bashrc && . $HOME/.bashrc`
-    * Mac OS X: need to install `gnu coreutils` before: `brew install coreutils` + modify `.bash_profile` as recommended.
+    * Mac OS X:
+      * `brew install coreutils`
+      * in `.bash_profile`:
+
+         ```
+         # Required for gnutils without prefix
+         PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"alias ll="ls -lapF"
+         MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+         [[ -s ~/.bashrc ]] && source ~/.bashrc
+
+         alias ls="ls --color=always" 
+         alias grep="grep --color=always"
+         alias egrep="egrep --color=always"
+         ```
 
 ## Adding your public key to a new ssh host
 *  `ssh-copy-id user@host`
