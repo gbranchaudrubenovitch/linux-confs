@@ -33,5 +33,11 @@ scripts and confs that I use in linux/mac environments
     ```
 * fallback-to-default-if-unset with: `myVar=${1:-defaultValue}` 
 
+## Big bash history
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
 ## Bash mastery tips
 * https://github.com/jlevy/the-art-of-command-line
